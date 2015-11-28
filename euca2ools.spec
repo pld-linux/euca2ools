@@ -4,7 +4,7 @@
 Summary:	Eucalyptus/AWS-compatible command line tools
 Name:		euca2ools
 Version:	3.2.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://downloads.eucalyptus.com/software/euca2ools/3.2/source/%{name}-%{version}.tar.xz
