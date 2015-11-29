@@ -11,7 +11,7 @@ Source0:	http://downloads.eucalyptus.com/software/euca2ools/3.2/source/%{name}-%
 # Source0-md5:	b62502aa45f679c4f0ad01b658f095f5
 URL:		https://github.com/eucalyptus/euca2ools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-setuptools > 7.0
 %endif
