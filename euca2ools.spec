@@ -93,8 +93,18 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README INSTALL
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/eu*.1*
+%attr(755,root,root) %{_bindir}/euare-*
+%attr(755,root,root) %{_bindir}/euca-*
+%attr(755,root,root) %{_bindir}/euform-*
+%attr(755,root,root) %{_bindir}/eulb-*
+%attr(755,root,root) %{_bindir}/euscale-*
+%attr(755,root,root) %{_bindir}/euwatch-*
+%{_mandir}/man1/euare-*.1*
+%{_mandir}/man1/euca-*.1*
+%{_mandir}/man1/euform-*.1*
+%{_mandir}/man1/eulb-*.1*
+%{_mandir}/man1/euscale-*.1*
+%{_mandir}/man1/euwatch-*.1*
 
 %if %{with python2}
 %files -n python-%{name}
