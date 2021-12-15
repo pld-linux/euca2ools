@@ -1,7 +1,10 @@
+#
+# Conditional build:
 %bcond_without	python2
 %bcond_with	python3 # it seems it is not there, although 'six' is used
 
 Summary:	Eucalyptus/AWS-compatible command line tools
+Summary(pl.UTF-8):	Narzędzia linii poleceń zgodne z Eucalyptus/AWS
 Name:		euca2ools
 Version:	3.2.0
 Release:	3
@@ -23,7 +26,7 @@ Requires:	gzip
 Requires:	kpartx
 Requires:	openssl-tools
 Requires:	parted
-Requires:	python-%{name}
+Requires:	python-%{name} = %{version}-%{release}
 Requires:	python-modules
 Requires:	rsync
 Requires:	util-linux
@@ -37,8 +40,16 @@ Eucalyptus. They aim to use the same input as similar tools provided
 by AWS for each service individually along with several enhancements
 that make them easier to use.
 
+%description -l pl.UTF-8
+Euca2ools to narzędzia linii poleceń służące do pracy z usługami AWS
+(Amazon Web Services) oraz innymi zgodnymi, takimi jak Eucalyptus.
+Celem jest używanie takiego samego wejścia, jak podobne narzędzia
+dostarczane przez AWS do poszczególnych usług z kilkoma rozszerzeniami
+ułatwiającymi ich używanie.
+
 %package -n python-%{name}
-Summary:	Euca2ools python modules
+Summary:	Euca2ools Python 2 modules
+Summary(pl.UTF-8):	Moduły Pythona 2 Euca2ools
 Group:		Libraries/Python
 Requires:	python-lxml
 Requires:	python-progressbar
@@ -48,10 +59,14 @@ Requires:	python-setuptools
 Requires:	python-six
 
 %description -n python-%{name}
+Euca2ools Python 2 modules.
 
+%description -n python-%{name} -l pl.UTF-8
+Moduły Pythona 2 Euca2ools.
 
 %package -n python3-%{name}
-Summary:	Euca2ools python modules
+Summary:	Euca2ools Python 3 modules
+Summary(pl.UTF-8):	Moduły Pythona 3 Euca2ools
 Group:		Libraries/Python
 Requires:	python3-lxml
 Requires:	python3-progressbar
@@ -61,6 +76,10 @@ Requires:	python3-setuptools
 Requires:	python3-six
 
 %description -n python3-%{name}
+Euca2ools Python 3 modules.
+
+%description -n python3-%{name} -l pl.UTF-8
+Moduły Pythona 3 Euca2ools.
 
 %prep
 %setup -q
